@@ -23,7 +23,7 @@ const SearchBar = () => {
     setPokemonEndPoint,
     pokemonFullInformation,
   } = useContext(PokedexContext);
-  console.log(pokemonFullInformation);
+
   const [showSearchBar, setShowSearchBar] = useState(false);
 
   const handleSearch = (pokemonName) => {
