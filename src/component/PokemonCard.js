@@ -100,7 +100,7 @@ const PokemonCard = ({ pokemonFilter }) => {
             })
             .join("");
 
-          const errorIMG = `./public_images/pokemon-notfound/poke${id}.png`;
+          const errorIMG = `./public_images/notfound1.png`;
 
           return (
             <PokeCard key={id} id={id} className="pokemon-card">

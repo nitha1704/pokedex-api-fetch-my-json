@@ -61,63 +61,63 @@ const SearchBar = () => {
   if (!pokemonFullInformation) {
     return null;
   }
-    return (
-      <WrapSearchBar className="searchbar-container">
-        <input
-          type="text"
-          value={pokemonName}
-          placeholder="Search for Pokemon"
-          className="searchbar"
-          onClick={() => {
-            pokemonName ? setShowSearchBar(true) : setShowSearchBar(false);
-          }}
-          onChange={(event) => {
-            handleSearch(event.target.value);
-          }}
-          onKeyDown={(event) => event.key === "Enter" && handleSubmitSearch()}
-        />
-        <div className="wrap-search-image" onClick={() => handleSubmitSearch()}>
-          <img src={searchIMG} alt="search-icon" />
-        </div>
+  return (
+    <WrapSearchBar className="searchbar-container">
+      <input
+        type="text"
+        value={pokemonName}
+        placeholder="Search for Pokemon"
+        className="searchbar"
+        onClick={() => {
+          pokemonName ? setShowSearchBar(true) : setShowSearchBar(false);
+        }}
+        onChange={(event) => {
+          handleSearch(event.target.value);
+        }}
+        onKeyDown={(event) => event.key === "Enter" && handleSubmitSearch()}
+      />
+      <div className="wrap-search-image" onClick={() => handleSubmitSearch()}>
+        <img src={searchIMG} alt="search-icon" />
+      </div>
 
-        {pokemonName && showSearchBar && (
-          <div className="pokemon-search-list">
-            {pokemonSearchData
-              .filter((value) =>
-                value.name.toLowerCase().includes(pokemonName.toLowerCase())
-              )
-              .map((value) => {
-                const firstCharUpperCase = value.name.split(" ").map((char) => {
-                  return char.charAt(0).toUpperCase() + char.substring(1);
-                });
-                return (
-                  <div
-                    className="pokemon-item"
-                    onClick={() => {
-                      setPokemonName(value.name);
-                      setShowSearchBar(false);
-                    }}
-                    key={value.name}
-                  >
-                    <div className="pokemon-thumbnail">
-                      <LazyLoadImage
-                        src={value.sprites}
-                        alt={firstCharUpperCase}
-                        className="pokemon-sprite"
-                        effect="blur"
-                        placeholderSrc={spinLoading}
-                      />
-                    </div>
-                    <div className="pokemon-name">
-                      <h3>{firstCharUpperCase}</h3>
-                    </div>
+      {pokemonName && showSearchBar && (
+        <div className="pokemon-search-list">
+          {pokemonSearchData
+            .filter((value) =>
+              value.name.toLowerCase().includes(pokemonName.toLowerCase())
+            )
+            .map((value) => {
+              const firstCharUpperCase = value.name.split(" ").map((char) => {
+                return char.charAt(0).toUpperCase() + char.substring(1);
+              });
+              return (
+                <div
+                  className="pokemon-item"
+                  onClick={() => {
+                    setPokemonName(value.name);
+                    setShowSearchBar(false);
+                  }}
+                  key={value.name}
+                >
+                  <div className="pokemon-thumbnail">
+                    <LazyLoadImage
+                      src={value.sprites}
+                      alt={firstCharUpperCase}
+                      className="pokemon-sprite"
+                      effect="blur"
+                      placeholderSrc={spinLoading}
+                    />
                   </div>
-                );
-              })}
-          </div>
-        )}
-      </WrapSearchBar>
-    );
+                  <div className="pokemon-name">
+                    <h3>{firstCharUpperCase}</h3>
+                  </div>
+                </div>
+              );
+            })}
+        </div>
+      )}
+    </WrapSearchBar>
+  );
 };
 
 const WrapSearchBar = styled.div`
@@ -134,7 +134,6 @@ const WrapSearchBar = styled.div`
     font-size: 21px;
     text-transform: capitalize;
     letter-spacing: 0.5px;
-
   }
 
   .wrap-search-image {
@@ -146,9 +145,9 @@ const WrapSearchBar = styled.div`
     transform: translateY(-50%);
     background: #b4ebff;
     cursor: pointer;
-    transition:0.3s;
+    transition: 0.3s;
     &:hover {
-      background: #B2ECFF;
+      background: #b2ecff;
     }
 
     img {
@@ -187,26 +186,28 @@ const WrapSearchBar = styled.div`
       border-top: none !important;
       border: 1.2px solid #8b949e;
     }
-    }
   }
   .pokemon-thumbnail {
-        width: 100px;
+    width: 100px;
     height: 100px;
   }
   .pokemon-sprite {
     width: 100%;
     height: 100%;
   }
-    .lazy-load-image-background.blur {
+  .lazy-load-image-background.blur {
     width: 100px;
     height: 100px;
     filter: blur(0.1px);
+    background-size: 50% 50% !important;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
   }
-    @media(max-width:450px){
-      input{
-        font-size:5vw;
-      }
-
+  @media (max-width: 450px) {
+    input {
+      font-size: 5vw;
+    }
+  }
 `;
 
 export default SearchBar;
