@@ -49,11 +49,12 @@ const GlobalContext = ({ children }) => {
 
     const pokemonData = await axios
       .get(
-        "https://elder-dragon-data.s3.us-east-2.amazonaws.com/pokemonData.json"
+        "https://elder-dragon-data.s3.us-east-2.amazonaws.com/pokemonDataMinify.json"
       )
-      .then((res) => res.data).catch(err => {
+      .then((res) => res.data)
+      .catch((err) => {
         console.log(err);
-      })
+      });
     
     const pokemonFullData = Array.isArray(pokemonData)
       ? pokemonData.map((item) => {
