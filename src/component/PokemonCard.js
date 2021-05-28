@@ -123,21 +123,15 @@ const PokemonCard = ({ pokemonFilter }) => {
                   <h3 className="name">{firstCharUpperCaseName}</h3>
                 </div>
                 <div className="wrap-types">
-                  {types.map(({ type }, index) => {
-                    const typesCapitalizeChar = type.name
-                      .split(" ")
-                      .map((char) => {
-                        return char.charAt(0).toUpperCase() + char.substring(1);
-                      })
-                      .join("");
+                  {types.map((item, index) => {
 
                     return (
                       <span
                         className="types thicker"
-                        style={{ backgroundColor: typesColor[type.name] }}
+                        style={{ backgroundColor: typesColor[item.toLowerCase()] }}
                         key={index}
                       >
-                        {typesCapitalizeChar}
+                        {item}
                       </span>
                     );
                   })}

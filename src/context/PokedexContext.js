@@ -49,70 +49,101 @@ const GlobalContext = ({ children }) => {
 
     const pokemonData = await axios
       .get(
-        "https://elder-dragon-data.s3.us-east-2.amazonaws.com/pokemonDataMinify.json"
+        "https://elder-dragon-data.s3.us-east-2.amazonaws.com/newPokemonDataMinify.json"
       )
       .then((res) => res.data)
       .catch((err) => {
         console.log(err);
       });
-    
-    const pokemonFullData = Array.isArray(pokemonData)
-      ? pokemonData.map((item) => {
-          return {
-            id: item.id,
-            name: item.name,
-            height: {
-              decimetres: item.height,
-              centimeter: item.height * 10,
-              feet: Number(item.height * 0.328084).toFixed(2),
-            },
-            weight: {
-              killogram: Math.round(item.weight * 0.1),
-              pound: Number(item.weight * 0.220462).toFixed(2),
-            },
-            stat: item.stats.reduce((acc, total) => {
-              if (!acc[total.stat.name]) {
-                acc[total.stat.name] = total.base_stat;
-              }
-              return acc;
-            }, {}),
-            abilities: item.abilities
-              .map(({ ability }) => {
-                return (
-                  ability.name.charAt(0).toUpperCase() +
-                  ability.name.substring(1)
-                );
-              })
-              .join(", "),
-            EVs: item.stats
-              .filter((stat) => {
-                return stat.effort > 0;
-              })
-              .map((item) => {
-                return `${item.effort} ${item.stat.name
-                  .split(" ")
-                  .map((char) => {
-                    return char.charAt(0).toUpperCase() + char.substring(1);
-                  })}`;
-              })
-              .join(", "),
-            type: item.types.map(({ type }) => {
-              return type.name.charAt(0).toUpperCase() + type.name.substring(1);
-            }),
-            captureRate: Math.round((100 / 255) * item.capture_rate), //convert to percentage
-            genderRatio: {
-              originalRate: item.gender_rate,
-              femaleRate: item.gender_rate * 12.5,
-              maleRate: (8 - item.gender_rate) * 12.5,
-            },
-            eggGroups: item.egg_groups.map(({ name }) => {
-              return name.charAt(0).toUpperCase() + name.substring(1);
-            }),
-            hatchSteps: 255 * (item.hatch_counter + 1),
-            description: item.flavor_text_entries,
-          };
-        })
-      : undefined;
+
+      const pokemonFullData = Array.isArray(pokemonData)
+        ? pokemonData.map((item) => {
+            return {
+              id: item.id,
+              name: item.name,
+              height: {
+                decimetres: item.height,
+                centimeter: item.height * 10,
+                feet: Number(item.height * 0.328084).toFixed(2),
+              },
+              weight: {
+                killogram: Math.round(item.weight * 0.1),
+                pound: Number(item.weight * 0.220462).toFixed(2),
+              },
+              captureRate: Math.round((100 / 255) * item.capture_rate), //convert to percentage
+              genderRatio: {
+                originalRate: item.gender_rate,
+                femaleRate: item.gender_rate * 12.5,
+                maleRate: (8 - item.gender_rate) * 12.5,
+              },
+              hatchSteps: 255 * (item.hatch_counter + 1),
+              description: item.flavor_text_entries[0],
+              EVs: item.EVs,
+              abilities: item.abilities,
+              egg_groups: item.egg_groups,
+              stats: item.stats,
+              types: item.types
+            };
+          })
+        : undefined;
+
+    // const pokemonFullData = Array.isArray(pokemonData)
+    //   ? pokemonData.map((item) => {
+    //       return {
+    //         id: item.id,
+    //         name: item.name,
+    //         height: {
+    //           decimetres: item.height,
+    //           centimeter: item.height * 10,
+    //           feet: Number(item.height * 0.328084).toFixed(2),
+    //         },
+    //         weight: {
+    //           killogram: Math.round(item.weight * 0.1),
+    //           pound: Number(item.weight * 0.220462).toFixed(2),
+    //         },
+    //         stat: item.stats.reduce((acc, total) => {
+    //           if (!acc[total.stat.name]) {
+    //             acc[total.stat.name] = total.base_stat;
+    //           }
+    //           return acc;
+    //         }, {}),
+    //         abilities: item.abilities
+    //           .map(({ ability }) => {
+    //             return (
+    //               ability.name.charAt(0).toUpperCase() +
+    //               ability.name.substring(1)
+    //             );
+    //           })
+    //           .join(", "),
+    //         EVs: item.stats
+    //           .filter((stat) => {
+    //             return stat.effort > 0;
+    //           })
+    //           .map((item) => {
+    //             return `${item.effort} ${item.stat.name
+    //               .split(" ")
+    //               .map((char) => {
+    //                 return char.charAt(0).toUpperCase() + char.substring(1);
+    //               })}`;
+    //           })
+    //           .join(", "),
+    //         type: item.types.map(({ type }) => {
+    //           return type.name.charAt(0).toUpperCase() + type.name.substring(1);
+    //         }),
+    //         captureRate: Math.round((100 / 255) * item.capture_rate), //convert to percentage
+    //         genderRatio: {
+    //           originalRate: item.gender_rate,
+    //           femaleRate: item.gender_rate * 12.5,
+    //           maleRate: (8 - item.gender_rate) * 12.5,
+    //         },
+    //         eggGroups: item.egg_groups.map(({ name }) => {
+    //           return name.charAt(0).toUpperCase() + name.substring(1);
+    //         }),
+    //         hatchSteps: 255 * (item.hatch_counter + 1),
+    //         description: item.flavor_text_entries,
+    //       };
+    //     })
+    //   : undefined;
 
     if (searchBarInfo && pokemonData) {
       // Pokemon Global Data
