@@ -65,7 +65,7 @@ a:focus {
     padding: 10px 0;
     text-align: center;
     font-family: "Pocket-Monk.otf";
-    font-display: swap;
+    font-display: auto;
     color: wheat;
     font-size: 60px;
     text-shadow: 0 1px 0 black, 0 0 1px rgba(0, 0, 0, 0.6),

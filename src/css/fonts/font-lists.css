@@ -2,11 +2,11 @@
 @font-face {
   font-family: "Cardo-Regular.ttf";
   src: url("./Cardo/Cardo-Regular.ttf");
-  font-display: swap;
+  font-display: auto;
 }
 
 @font-face {
   font-family: "Pocket-Monk.otf";
   src:url("./chequered-ink_pocket-monk/Pocket\ Monk.otf");
-  font-display: swap;
+  font-display: auto;
 }
