@@ -893,12 +893,11 @@ const PokemonInfoSection = styled.section`
           letter-spacing: 0.5px;
           margin-right: 2vw;
         }
-        /* .male {
-          color: #3355ff;
-        }
-        .female {
-          color: #c2185b;
-        } */
+      }
+      .graph {
+        display:flex;
+        justify-content: center;
+        align-items: center;
       }
     }
     .wrap-group-and-evs {

@@ -112,6 +112,8 @@ const PokemonCard = ({ pokemonFilter }) => {
                   <LazyLoadImage
                     src={pokemonImage}
                     className="pokemon-image img-fit"
+                    height="100"
+                    width="100"
                     placeholderSrc={loadingIMG}
                     effect="blur"
                     threshold="10"
