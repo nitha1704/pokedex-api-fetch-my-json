@@ -9,7 +9,7 @@ body {
   background: url("../images/pokemon_bg.jpg");
   background-position: center !important;
   color: #fff !important;
-  font-family: "Cardo-Regular.ttf" !important;
+  font-family: "Cardo-Regular" !important;
   overflow-x: hidden;
 }
 img {
@@ -64,8 +64,7 @@ a:focus {
 .pokemon-header-title {
     padding: 10px 0;
     text-align: center;
-    font-family: "Pocket-Monk.otf";
-    font-display: auto;
+    font-family: "Pocket-Monk";
     color: wheat;
     font-size: 60px;
     text-shadow: 0 1px 0 black, 0 0 1px rgba(0, 0, 0, 0.6),
