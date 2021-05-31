@@ -7,7 +7,6 @@
 }
 body {
   background: url("../images/pokemon_bg.jpg");
-  background-position: center !important;
   color: #fff !important;
   font-family: "Cardo-Regular" !important;
   overflow-x: hidden;
@@ -57,7 +56,6 @@ a:focus {
 
 .app {
   background: url("../images/pokemon_bg.jpg");
-  background-position: center;
   min-height: 100vh;
 }
 
