@@ -1,4 +1,4 @@
-export default [
+const pokemonSearchBarData  = [
   {
     id: 1,
     name: "bulbasaur",
@@ -5388,3 +5388,5 @@ export default [
       "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/898.png",
   },
 ];
+
+export default pokemonSearchBarData;
