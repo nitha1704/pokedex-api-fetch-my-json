@@ -48,7 +48,9 @@ const GlobalContext = ({ children }) => {
     setLoading(true);
 
     const pokemonData = await axios
-      .get("https://pokedex-api-customized.netlify.app")
+      .get(
+        "https://pokedex-api-customized.netlify.app/newPokemonDataMinify.json"
+      )
       .then((res) => res.data)
       .catch((err) => {
         console.log(err);

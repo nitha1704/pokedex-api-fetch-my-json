@@ -2311,7 +2311,7 @@ const pokemonSearchBarData  = [
   },
   {
     id: 386,
-    name: "deoxys-normal",
+    name: "deoxys",
     sprites:
       "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/386.png",
   },
@@ -2473,7 +2473,7 @@ const pokemonSearchBarData  = [
   },
   {
     id: 413,
-    name: "wormadam-plant",
+    name: "wormadam",
     sprites:
       "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/413.png",
   },
@@ -2917,7 +2917,7 @@ const pokemonSearchBarData  = [
   },
   {
     id: 487,
-    name: "giratina-altered",
+    name: "giratina",
     sprites:
       "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/487.png",
   },
@@ -2947,7 +2947,7 @@ const pokemonSearchBarData  = [
   },
   {
     id: 492,
-    name: "shaymin-land",
+    name: "shaymin",
     sprites:
       "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/492.png",
   },
@@ -3295,7 +3295,7 @@ const pokemonSearchBarData  = [
   },
   {
     id: 550,
-    name: "basculin-red-striped",
+    name: "basculin",
     sprites:
       "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/550.png",
   },
@@ -3325,7 +3325,7 @@ const pokemonSearchBarData  = [
   },
   {
     id: 555,
-    name: "darmanitan-standard",
+    name: "darmanitan",
     sprites:
       "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/555.png",
   },
@@ -3841,13 +3841,13 @@ const pokemonSearchBarData  = [
   },
   {
     id: 641,
-    name: "tornadus-incarnate",
+    name: "tornadus",
     sprites:
       "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/641.png",
   },
   {
     id: 642,
-    name: "thundurus-incarnate",
+    name: "thundurus",
     sprites:
       "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/642.png",
   },
@@ -3865,7 +3865,7 @@ const pokemonSearchBarData  = [
   },
   {
     id: 645,
-    name: "landorus-incarnate",
+    name: "landorus",
     sprites:
       "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/645.png",
   },
@@ -3877,13 +3877,13 @@ const pokemonSearchBarData  = [
   },
   {
     id: 647,
-    name: "keldeo-ordinary",
+    name: "keldeo",
     sprites:
       "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/647.png",
   },
   {
     id: 648,
-    name: "meloetta-aria",
+    name: "meloetta",
     sprites:
       "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/648.png",
   },
@@ -4063,7 +4063,7 @@ const pokemonSearchBarData  = [
   },
   {
     id: 678,
-    name: "meowstic-male",
+    name: "meowstic",
     sprites:
       "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/678.png",
   },
@@ -4081,7 +4081,7 @@ const pokemonSearchBarData  = [
   },
   {
     id: 681,
-    name: "aegislash-shield",
+    name: "aegislash",
     sprites:
       "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/681.png",
   },
@@ -4255,13 +4255,13 @@ const pokemonSearchBarData  = [
   },
   {
     id: 710,
-    name: "pumpkaboo-average",
+    name: "pumpkaboo",
     sprites:
       "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/710.png",
   },
   {
     id: 711,
-    name: "gourgeist-average",
+    name: "gourgeist",
     sprites:
       "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/711.png",
   },
@@ -4441,7 +4441,7 @@ const pokemonSearchBarData  = [
   },
   {
     id: 741,
-    name: "oricorio-baile",
+    name: "oricorio",
     sprites:
       "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/741.png",
   },
@@ -4465,13 +4465,13 @@ const pokemonSearchBarData  = [
   },
   {
     id: 745,
-    name: "lycanroc-midday",
+    name: "lycanroc",
     sprites:
       "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/745.png",
   },
   {
     id: 746,
-    name: "wishiwashi-solo",
+    name: "wishiwashi",
     sprites:
       "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/746.png",
   },
@@ -4639,7 +4639,7 @@ const pokemonSearchBarData  = [
   },
   {
     id: 774,
-    name: "minior-red-meteor",
+    name: "minior",
     sprites:
       "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/774.png",
   },
@@ -4663,7 +4663,7 @@ const pokemonSearchBarData  = [
   },
   {
     id: 778,
-    name: "mimikyu-disguised",
+    name: "mimikyu",
     sprites:
       "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/778.png",
   },
@@ -5089,7 +5089,7 @@ const pokemonSearchBarData  = [
   },
   {
     id: 849,
-    name: "toxtricity-amped",
+    name: "toxtricity",
     sprites:
       "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/849.png",
   },
@@ -5245,13 +5245,13 @@ const pokemonSearchBarData  = [
   },
   {
     id: 875,
-    name: "eiscue-ice",
+    name: "eiscue",
     sprites:
       "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/875.png",
   },
   {
     id: 876,
-    name: "indeedee-male",
+    name: "indeedee",
     sprites:
       "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/876.png",
   },
@@ -5323,13 +5323,13 @@ const pokemonSearchBarData  = [
   },
   {
     id: 888,
-    name: "zacian-hero",
+    name: "zacian",
     sprites:
       "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/888.png",
   },
   {
     id: 889,
-    name: "zamazenta-hero",
+    name: "zamazenta",
     sprites:
       "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/889.png",
   },
@@ -5347,7 +5347,7 @@ const pokemonSearchBarData  = [
   },
   {
     id: 892,
-    name: "urshifu-single-strike",
+    name: "urshifu",
     sprites:
       "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/892.png",
   },
