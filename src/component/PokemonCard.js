@@ -54,7 +54,7 @@ const PokemonCard = ({ pokemonFilter }) => {
         setPokemonChildrenLength(wrapPokemonItem.current.children.length);
       }
     }
-  }, [pokemonEndPoint]);
+  }, [pokemonEndPoint, pokemonFilter]);
 
   useEffect(() => {
     window.scrollTo(0, scrollTopPosition);

@@ -58,9 +58,10 @@ const SearchBar = () => {
     };
   }, []);
 
-  if (!pokemonFullInformation) {
+  if (!pokemonFullInformation || pokemonFullInformation.length <= 0) {
     return null;
   }
+
   return (
     <WrapSearchBar className="searchbar-container">
       <input
