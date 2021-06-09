@@ -102,7 +102,7 @@ const SearchBar = () => {
                 >
                   <div className="pokemon-thumbnail">
                     <LazyLoadImage
-                      src={value.sprites}
+                      src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${value.id}.png`}
                       alt={firstCharUpperCase}
                       className="pokemon-sprite"
                       effect="blur"

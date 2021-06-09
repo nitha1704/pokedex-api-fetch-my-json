@@ -1,9 +1,6 @@
 import React, { useState, useEffect, createContext, useCallback } from "react";
 import axios from "axios";
 
-// Data
-import searchBarInfo from "../data/searchBarInfo";
-
 const PokedexContext = createContext();
 const GlobalContext = ({ children }) => {
   const [loading, setLoading] = useState(true);
@@ -56,6 +53,8 @@ const GlobalContext = ({ children }) => {
         console.log(err);
       });
 
+      console.log(pokemonData);
+
     const pokemonFullData = Array.isArray(pokemonData)
       ? pokemonData.map((item) => {
           return {
@@ -87,11 +86,11 @@ const GlobalContext = ({ children }) => {
         })
       : undefined;
 
-    if (searchBarInfo && pokemonData) {
+    if (pokemonData) {
       // Pokemon Global Data
       setPokemon(pokemonData);
       setPokemonFilter(pokemonData);
-      setPokemonSearchData(searchBarInfo);
+      setPokemonSearchData(pokemonData);
       // Pokemon Single Page Data
       setPokemonFullInformation(pokemonFullData);
     } else {
